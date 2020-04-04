@@ -1,0 +1,23 @@
+{
+  "name": "js_testing_prac",
+  "version": "1.0.0",
+  "description": "A simple javascript testing program",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desirekaleba/js_testing_prac.git"
+  },
+  "author": "Desire Kaleba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desirekaleba/js_testing_prac/issues"
+  },
+  "homepage": "https://github.com/desirekaleba/js_testing_prac#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1"
+  }
+}
