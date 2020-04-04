@@ -4,7 +4,8 @@
   "description": "A simple javascript testing program",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   "homepage": "https://github.com/desirekaleba/js_testing_prac#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "coveralls": "^3.0.11",
+    "mocha": "^7.1.1",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.0.1"
   }
 }
