@@ -1,9 +1,9 @@
 const assert = require('chai').assert;
-const app = require('../app');
+const { sayHello, addNumbers } = require('../app');
 
 // Results
-let sayHelloResult = app.sayHello();
-let addNumbersResult = app.addNumbers(45, 5);
+let sayHelloResult = sayHello();
+let addNumbersResult = addNumbers(45, 5);
 
 describe('App', () => {
     describe('sayHello()', () => {
