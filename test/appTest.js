@@ -1,25 +1,32 @@
 const assert = require('chai').assert;
-const sayHello = require('../app').sayHello;
-const addNumbers = require('../app').addNumbers;
+const app = require('../app');
+
+// Results
+let sayHelloResult = app.sayHello();
+let addNumbersResult = app.addNumbers(45, 5);
 
 describe('App', () => {
-    it('sayHello should return hello', () => {
-        let result = sayHello();
-        assert.equal(result, 'hello');
+    describe('sayHello()', () => {
+        it('sayHello should return hello', () => {
+            assert.equal(sayHelloResult, 'hello');
+        });
+
+        it('sayHello should return type string', function () {
+            assert.typeOf(sayHelloResult, 'string');
+        });
     });
 
-    it('sayHello should return type string', function(){
-        let result = sayHello();
-        assert.typeOf(result, 'string');
-    });
+    describe('addNumbers()', () => {
+        it('addNumbers should return the sum of two numbers', function () {
+            assert.equal(addNumbersResult, 50);
+        });
 
-    it('addNumbers should return the sum of two numbers', function() {
-        let result = addNumbers(4, 5);
-        assert.equal(result, 9);
-    });
+        it('addNumbersResult should be above 7', () => {
+            assert.isAbove(addNumbersResult, 7);
+        });
 
-    it('addNumbers should be above 7', () => {
-        let result = addNumbers(-4, 12);
-        assert.isAbove(result, 7);
+        it('addNumbers should return type number', function () {
+            assert.typeOf(addNumbersResult, 'number');
+        });
     });
 });
