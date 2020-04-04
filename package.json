@@ -4,8 +4,8 @@
   "description": "A simple javascript testing program",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc npm run test"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
